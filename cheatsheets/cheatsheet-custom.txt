@@ -1,0 +1,91 @@
+## Custom Cheatsheet @custom
+# TELESCOPE COMMANDS
+Find files (Telescope)                    | <leader>ff
+Live grep (Telescope)                     | <leader>fg
+List buffers (Telescope)                  | <leader>fb
+Help tags (Telescope)                     | <leader>fh
+Move selection next (Telescope)           | <C-j>
+Move selection previous (Telescope)      | <C-k>
+
+# FILE MANAGEMENT
+Open Ranger file manager                  | <leader>r
+
+# THEME MANAGEMENT
+Switch to next theme                      | <F8>
+Reset theme to default                    | :ResetTheme
+
+# LÖVE GAME DEVELOPMENT
+Run LÖVE game (Tetris)                    | <F5>
+
+# GENERAL VIM ESSENTIALS
+Leader key (space)                        | <leader>
+Go to top of file                         | gg
+Go to bottom of file                      | G
+Go to start of line                       | 0
+Go to end of line                         | $
+Next word                                 | w
+Previous word                             | b
+Delete line                               | dd
+Yank (copy) line                          | yy
+Paste after cursor                        | p
+Paste before cursor                       | P
+Undo                                      | u
+Redo                                      | <C-r>
+Enter visual mode                         | v
+Enter visual line mode                    | V
+Enter visual block mode                   | <C-v>
+Insert before cursor                      | i
+Insert after cursor                       | a
+Insert at start of line                   | I
+Insert at end of line                     | A
+Insert new line below                     | o
+Insert new line above                     | O
+
+# MARKS AND JUMPS
+Set mark 'a'                              | ma
+Jump to mark 'a' (line)                   | 'a
+Jump to mark 'a' (exact)                  | `a
+Jump to last position                     | ''
+Jump to last position (exact)             | ``
+
+# BUFFER MANAGEMENT
+Next buffer                               | :bn
+Previous buffer                           | :bp
+Delete buffer                             | :bd
+Wipe buffer                               | :bw
+
+# WINDOW MANAGEMENT
+Move to left window                       | <C-w>h
+Move to bottom window                     | <C-w>j
+Move to top window                        | <C-w>k
+Move to right window                      | <C-w>l
+Split window vertically                   | <C-w>v
+Split window horizontally                 | <C-w>s
+Close current window                      | <C-w>q
+
+# SEARCH AND REPLACE
+Search forward                            | /
+Search backward                           | ?
+Next search result                        | n
+Previous search result                    | N
+Search word under cursor forward          | *
+Search word under cursor backward         | #
+Replace first occurrence in line          | :s/old/new
+Replace all occurrences in line           | :s/old/new/g
+Replace all occurrences in file           | :%s/old/new/g
+
+# LSP COMMANDS (when LSP is active)
+Go to definition                          | gd
+Go to references                          | gr
+Show documentation                        | K
+Rename symbol                             | <leader>rn
+Code actions                              | <leader>ca
+Format code                               | <leader>f
+
+# QUICK COMMANDS
+Save file                                 | :w
+Quit                                      | :q
+Save and quit                             | :wq
+Quit without saving                       | :q!
+Edit file                                 | :e
+Open help                                 | :help

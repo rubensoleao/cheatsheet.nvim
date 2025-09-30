@@ -6,6 +6,19 @@ displaying in a floating window if Telescope is not installed) with command auto
 bundled cheats for the editor, vim plugins, nerd-fonts, etc because hoomans suck at
 remembering stuff:
 
+## Why This Fork?
+
+This is a fork of the original [sudormrfbin/cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim) repository. I created this fork to add my own custom cheatsheet,
+
+### Future TODO: User-Configurable Cheatsheets
+
+A planned feature is to make cheatsheet configurations user-configurable, similar to how Lua formatters work. This would allow users to:
+- Define their own custom cheatsheets through configuration
+- Share cheatsheet configurations as reusable modules
+- Avoid the need to fork this repository just to add custom cheatsheets
+
+This would make the plugin even more flexible and user-friendly while maintaining the simplicity of the current `.txt` format.
+
 ![cheatsheet.nvim gif](https://user-images.githubusercontent.com/23398472/121174386-7a182c00-c877-11eb-979b-5d5e6f8267d8.gif)
 
 <sup>Font: [mononoki](https://madmalik.github.io/mononoki/), Colorscheme: [onedark](https://github.com/joshdick/onedark.vim), [Dotfiles](https://github.com/sudormrfbin/dotfiles2)</sup>
@@ -119,6 +132,7 @@ have `:set textwidth=` typed into it and the cursor at end.
 These are the cheatsheets shipped with `cheatsheet.nvim` (PRs welcome!):
 
 - [`default`](./cheatsheets/cheatsheet-default.txt) (vim builtin commands and mappings)
+- [`custom`](./cheatsheets/cheatsheet-custom.txt) (personalized keybindings including Telescope, file management, themes, LÖVE development, and Vim essentials)
 - [`nerd-fonts`](https://www.nerdfonts.com/) (useful for ricing paired with `<C-Y>` for copying the symbol)
 - `unicode` (currently only has box drawing characters)
 - `regex` (PCRE)
@@ -198,8 +212,8 @@ have more fine grained control for selective usage:
 ```lua
 require("cheatsheet").setup({
     bundled_cheatsheets = {
-        -- only show the default cheatsheet
-        enabled = { "default" },
+        -- only show the default and custom cheatsheets
+        enabled = { "default", "custom" },
     },
     bundled_plugin_cheatsheets = {
         -- show cheatsheets for all plugins except gitsigns
@@ -207,6 +221,23 @@ require("cheatsheet").setup({
     }
 })
 ```
+
+### Using the Custom Cheatsheet
+
+The custom cheatsheet (`cheatsheet-custom.txt`) is included by default and contains commonly used keybindings organized by category:
+
+- **Telescope Commands**: File finding, live grep, buffer management
+- **File Management**: Ranger integration
+- **Theme Management**: Theme switching and resetting
+- **LÖVE Game Development**: Running games
+- **Vim Essentials**: Core navigation, editing, visual modes
+- **Marks and Jumps**: Bookmarking and navigation
+- **Buffer/Window Management**: Multi-buffer workflows
+- **Search and Replace**: Finding and replacing text
+- **LSP Commands**: Language server integration
+- **Quick Commands**: Essential file operations
+
+To disable the custom cheatsheet, remove `"custom"` from the enabled list or add it to the disabled list.
 
 ## `cheatsheet.txt` File Format
 
